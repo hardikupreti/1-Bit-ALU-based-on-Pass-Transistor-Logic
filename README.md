@@ -1,2 +1,3 @@
 # 1-Bit-ALU-based-on-Pass-Transistor-Logic
-A 1 Bit ALU has been designed using Pass Transistor Logic. 10T design has been implemented.
+This repository presents the design of a 1 Bit ALU designed using Pass Transistor Logic. A 10T design has been implemented using Synopsis Custom Compiler on 28nm CMOS Technology.
+
