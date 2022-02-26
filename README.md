@@ -59,7 +59,7 @@ The circuit schematic of the ALU is shown below
   Fig. 2: Reference Waveform [1]
 </p>
 
-# Simulation in Synopsys
+# Simulation in Synopsys Custom Compiler
 ## ALU Schematic
 <p align="center">
 <img src="design/ALUdesign.png"></br>
