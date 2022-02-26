@@ -5,10 +5,10 @@ This repository presents the design of a 1 Bit ALU designed using Pass Transisto
 # Table of Contents
    * [Abstract](#abstract)
   * [Reference Circuit Details](#reference-circuit-details)
-  * [Reference Circuit Diagram](#reference-circuit-diagram)
+  * [Reference Circuit Details](#Reference-Circuit-Details)
   * [Reference Waveform](#reference-circuit-waveform)
-- [Simulation in Synopsys Custom Compiler](#simulation-in-synopsys)
-  * [Schematic](#schematic)
+- [Simulation in Synopsys Custom Compiler](#Simulation-in-Synopsys-Custom-Compiler)
+  * [Schematic](#ALU-Schematic)
   * [Symbol](#symbol)
   * [Testbench](#Testbench)
   * [Parameters for Input Voltage Sources and Power Supply](#Parameters-for-Input-Voltage-Sources-and-Power-Supply)
