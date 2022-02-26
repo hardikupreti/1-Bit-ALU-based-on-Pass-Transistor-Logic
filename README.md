@@ -11,8 +11,7 @@ This repository presents the design of a 1 Bit ALU designed using Pass Transisto
   * [Schematic](#schematic)
   * [Symbol](#symbol)
   * [Testbench](#Testbench)
-  * [Parameters for DC Voltage Source for VDD](#Parameters-for-DC-Voltage-Source-for-VDD)
-  * [Parameters for Pulse Voltage Sources for inputs](#Parameters-for-Pulse-Voltage-Sources-for-inputs)
+  * [Parameters for Input Voltage Sources and Power Supply](#Parameters-for-Input-Voltage-Sources-and-Power-Supply)
   * [Transient Settings](#transient-settings)
   * [Netlist](#netlist)
   * [Waveform](#waveform)
@@ -41,7 +40,7 @@ Sum and the Carry pins.
 
 The circuit of the Full Adder is shown below:
 <p align="center">
-<img src="Images/1bitfulladder_ref.png"></br>
+<img src="design/1bitfulladder_ref.png"></br>
   Fig. 1: 1 Bit Full Adder Reference Circuit [2]
 </p>
 
@@ -79,7 +78,7 @@ The circuit schematic of the ALU is shown below
   Fig. 5: Testbench for ALU 
 </p>
 
-## Parameters for Pulse Voltage Sources for Inputs
+## Parameters for Input Voltage Sources and Power Supply
 <p align="center">
 <img src="design/inputs.png"></br>
   Fig. 5: DC VDD and Pulse Voltage Inputs 
