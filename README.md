@@ -182,7 +182,7 @@ xi9 gnd! vdd a a_ inverter
 .end
 
 ```
-## Waveform
+## Simulation Waveform for 28 nm Pass Transistor based 1 Bit ALU
 
 <p align="center">
 <img src="design/ALUwaveform.png"></br>
@@ -190,12 +190,14 @@ xi9 gnd! vdd a a_ inverter
 </p>
 
 ## Conclusion
-A 1 Bit ALU has been designed on the Synopsys Custom Compiler and the waveform has been obtained. The use of Pass Transistor Logic helps to greatly bring down the number of transistors to 10 transistors. Also, due to less number of transistors, the Area, as well as the power consumption of this design, is less as compared to the earlier designs of ALU which have more transistors.
+A 1 Bit ALU has been designed on the Synopsys Custom Compiler using the 28 nm Technology and the waveform has been obtained. The use of Pass Transistor Logic helps to greatly bring down the number of transistors to 10 transistors for implementing the entire ALU.
 
 ## Acknowledgement
-1. Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd. - kunalpghosh@gmail.com
+1. Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd.
 2. Chinmay panda, IIT Hyderabad
 3. Sameer Durgoji, NIT Karnataka
+4. IIT Hyderabad
+5. Synopsys
 ## References
 [1]. G. Karthik Reddy, Kavita Khare, " Low power-area 
 designs of 1-bit full adder in cadence virtuoso platform," 
