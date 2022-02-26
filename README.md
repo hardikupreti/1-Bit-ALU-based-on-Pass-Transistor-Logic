@@ -14,7 +14,7 @@ This repository presents the design of a 1 Bit ALU designed using Pass Transisto
   * [Parameters for Input Voltage Sources and Power Supply](#Parameters-for-Input-Voltage-Sources-and-Power-Supply)
   * [Transient Settings](#transient-settings)
   * [Netlist](#netlist)
-  * [Waveform](#waveform)
+  * [Waveform](#Simulation-Waveform-for-28-nm-Pass-Transistor-based-1-Bit-ALU)
 
  * [Conclusion](#conclusion)
   * [Acknowledgement](#acknowlegement)
