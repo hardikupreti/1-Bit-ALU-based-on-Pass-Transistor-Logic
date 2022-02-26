@@ -17,7 +17,7 @@ This repository presents the design of a 1 Bit ALU designed using Pass Transisto
   * [Waveform](#Simulation-Waveform-for-28-nm-Pass-Transistor-based-1-Bit-ALU)
 
  * [Conclusion](#Conclusion)
-  * [Acknowledgement](#Acknowlegement)
+  * [Acknowledgement](#Acknowledgement)
   * [References](#References)
 
 
