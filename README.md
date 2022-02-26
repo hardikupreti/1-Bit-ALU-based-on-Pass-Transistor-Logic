@@ -15,7 +15,8 @@ This repository presents the design of a 1 Bit ALU designed using Pass Transisto
   * [Transient Settings](#transient-settings)
   * [Netlist](#netlist)
   * [Waveform](#waveform)
-  * [Conclusion](#conclusion)
+
+ * [Conclusion](#conclusion)
   * [Acknowledgement](#acknowlegement)
   * [References](#references)
 
@@ -44,9 +45,8 @@ The circuit of the Full Adder is shown below:
   Fig. 1: 1 Bit Full Adder Reference Circuit [2]
 </p>
 
+B. 1 Bit ALU
 
-
-## Reference Circuit Diagram
 The circuit schematic of the ALU is shown below
 <p align="center">
 <img src="design/ALU_ref.png"></br>
