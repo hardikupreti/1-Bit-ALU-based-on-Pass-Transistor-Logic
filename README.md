@@ -16,9 +16,9 @@ This repository presents the design of a 1 Bit ALU designed using Pass Transisto
   * [Netlist](#netlist)
   * [Waveform](#Simulation-Waveform-for-28-nm-Pass-Transistor-based-1-Bit-ALU)
 
- * [Conclusion](#conclusion)
-  * [Acknowledgement](#acknowlegement)
-  * [References](#references)
+ * [Conclusion](#Conclusion)
+  * [Acknowledgement](#Acknowlegement)
+  * [References](#References)
 
 
 ## Abstract
@@ -87,9 +87,13 @@ The circuit schematic of the ALU is shown below
 </p>
 
 For Power Supply : DC Voltage source has been used at 1.8 V
+
 For Inputs a,b and cin : Pulse Voltage Sources have been used with Vhigh = 1.05 V and Vlow = 0 V. The rise time and fall times are 150 ps.
+
 Time period for a : 40 ns
+
 Time period for b : 20 ns
+
 Time period for cin : 20 ns
 
 
