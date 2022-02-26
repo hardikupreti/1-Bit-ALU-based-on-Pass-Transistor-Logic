@@ -41,7 +41,7 @@ Sum and the Carry pins.
 
 The circuit of the Full Adder is shown below:
 <p align="center">
-<img src="Images/1bitfulladder_ref.jpeg"></br>
+<img src="Images/1bitfulladder_ref.png"></br>
   Fig. 1: 1 Bit Full Adder Reference Circuit [2]
 </p>
 
@@ -50,13 +50,13 @@ The circuit of the Full Adder is shown below:
 ## Reference Circuit Diagram
 The circuit schematic of the ALU is shown below
 <p align="center">
-<img src="design/ALU_ref.jpeg"></br>
+<img src="design/ALU_ref.png"></br>
   Fig. 1: Reference ALU Circuit [1]
 </p>
 
 ## Reference Circuit Waveform
 <p align="center">
-<img src="design/waveform_ref.jpeg"></br>
+<img src="design/waveform_ref.png"></br>
   Fig. 2: Reference Waveform [1]
 </p>
 
@@ -95,53 +95,61 @@ The circuit schematic of the ALU is shown below
 ## Netlist
 ```
 *  Generated for: PrimeSim
-*  Design library name: sm_hvt_levelshifter
-*  Design cell name: hvt_levelshifter_tb
+*  Design library name: PROJ1
+*  Design cell name: ALUFINAL_TB
 *  Design view name: schematic
 .lib 'saed32nm.lib' TT
 
 *Custom Compiler Version S-2021.09
-*Wed Feb 23 02:17:30 2022
+*Sat Feb 26 19:06:18 2022
 
 .global gnd!
 ********************************************************************************
-* Library          : sm_hvt_levelshifter
-* Cell             : hvt_levelshifter
+* Library          : PROJ1
+* Cell             : ALUFINAL
 * View             : schematic
 * View Search List : hspice hspiceD schematic spice veriloga
 * View Stop List   : hspice hspiceD
 ********************************************************************************
-.subckt hvt_levelshifter gnd_1 out vddh vddl vin
-xm8 net85 net94 gnd_1 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
-xm7 net83 vin gnd_1 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
-xm6 net43 net44 net85 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
-xm5 net39 net44 net83 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
-xm4 out net103 net19 net44 n105 w=0.1u l=0.03u nf=1 m=1
-xm3 net19 net51 net44 net44 n105 w=0.1u l=0.03u nf=1 m=1
-xm2 net9 out net44 net44 n105 w=0.1u l=0.03u nf=1 m=1
-xm1 net51 net63 net9 net44 n105 w=0.1u l=0.03u nf=1 m=1
-xm0 net94 vin gnd_1 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
-xm15 net63 net103 vddh vddh p105 w=0.1u l=0.03u nf=1 m=1
-xm14 net103 net63 vddh vddh p105 w=0.1u l=0.03u nf=1 m=1
-xm13 out net103 vddh vddh p105 w=0.1u l=0.03u nf=1 m=1
-xm12 net51 net63 vddh vddh p105 w=0.1u l=0.03u nf=1 m=1
-xm11 net94 vin vddl vddl p105 w=0.1u l=0.03u nf=1 m=1
-xm10 net43 net44 net63 vddh p105 w=0.1u l=0.03u nf=1 m=1
-xm9 net39 net44 net103 vddh p105 w=0.1u l=0.03u nf=1 m=1
-vbias net44 gnd! dc=0.6
-.ends hvt_levelshifter
+.subckt alufinal and carry or sum xor a a_ b cin cin_ vdd
+xm19 or a vdd gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm6 or a_ b gnd! n105 w=0.2u l=0.03u nf=1 m=1
+xm5 and a_ gnd! gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm18 sum xor cin_ gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm2 carry xor cin gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm1 xor b a_ gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm4 and a b gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm9 sum xor cin vdd p105 w=0.1u l=0.03u nf=1 m=1
+xm8 carry xor a vdd p105 w=0.1u l=0.03u nf=1 m=1
+xm7 xor b a vdd p105 w=0.1u l=0.03u nf=1 m=1
+.ends alufinal
 
 ********************************************************************************
-* Library          : sm_hvt_levelshifter
-* Cell             : hvt_levelshifter_tb
+* Library          : PROJ1
+* Cell             : inverter
 * View             : schematic
 * View Search List : hspice hspiceD schematic spice veriloga
 * View Stop List   : hspice hspiceD
 ********************************************************************************
-xi0 gnd! out net8 net6 net10 hvt_levelshifter
-v6 net8 gnd! dc=3.3
-v5 net6 gnd! dc=1.05
-v9 net10 gnd! dc=1.05 pulse ( 0 1.05 0 0.1u 0.1u 5u 10u )
+.subckt inverter gnd_1 vdd vin vout
+xm0 vout vin gnd_1 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
+xm1 vout vin vdd vdd p105 w=0.1u l=0.03u nf=1 m=1
+.ends inverter
+
+********************************************************************************
+* Library          : PROJ1
+* Cell             : ALUFINAL_TB
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+xi0 and carry or sum xor a a_ b cin cin_ vdd alufinal
+vdd vdd gnd! dc=1.8
+vcin cin gnd! dc=0 pulse ( 1.05 0 0 150p 150p 10n 20n )
+vb b gnd! dc=0 pulse ( 0 1.05 0 150p 150p 10n 20n )
+va a gnd! dc=0 pulse ( 1.05 0 0 150p 150p 20n 40n )
+xi10 gnd! vdd cin cin_ inverter
+xi9 gnd! vdd a a_ inverter
 
 
 
@@ -150,11 +158,11 @@ v9 net10 gnd! dc=1.05 pulse ( 0 1.05 0 0.1u 0.1u 5u 10u )
 
 
 
-.tran '1u' '30u' name=tran
+.tran '5n' '100n' name=tran
 
 .option primesim_remove_probe_prefix = 0
 .probe v(*) i(*) level=1
-.probe tran v(out) v(net10)
+.probe tran v(and) v(carry) v(or) v(sum) v(xor) v(a) v(b) v(cin)
 
 .temp 25
 
