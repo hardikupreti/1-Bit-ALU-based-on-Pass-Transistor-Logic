@@ -1,4 +1,4 @@
-# 1-Bit-ALU-based-on-Pass-Transistor-Logic
+# 1-Bit-ALU-based-on-Pass-Transistor-Logic-28 nm
 
 This repository presents the design of a 1 Bit ALU designed using Pass Transistor Logic. A 10T design has been implemented using Synopsis Custom Compiler on 28nm CMOS Technology.
 
@@ -50,45 +50,47 @@ The circuit of the Full Adder is shown below:
 The circuit schematic of the ALU is shown below
 <p align="center">
 <img src="design/ALU_ref.png"></br>
-  Fig. 1: Reference ALU Circuit [1]
+  Fig. 2: Reference ALU Circuit [1]
 </p>
 
 ## Reference Circuit Waveform
 <p align="center">
 <img src="design/waveform_ref.png"></br>
-  Fig. 2: Reference Waveform [1]
+  Fig. 3: Reference Waveform [1]
 </p>
 
 # Simulation in Synopsys Custom Compiler
 ## ALU Schematic
 <p align="center">
 <img src="design/ALUdesign.png"></br>
-  Fig. 3: ALU Schematic using Pass Transistor Logic
+  Fig. 4: ALU Schematic using Pass Transistor Logic
 </p>
+
+#Note :  In [1] the Design which has been referred is based on 65 nm technology. Here, I have implemented the OR Gate in a different manner so as to make the output waveform more accurate for 28 nm. Rest of the circuit is same as given in [1].
 
 ## Symbol
 <p align="center">
 <img src="design/ALUsymbol.png"></br>
-  Fig. 4: ALU Symbol 
+  Fig. 5: ALU Symbol 
 </p>
 
 ## Testbench
 <p align="center">
 <img src="design/ALU_tb.png"></br>
-  Fig. 5: Testbench for ALU 
+  Fig. 6: Testbench for ALU 
 </p>
 
 ## Parameters for Input Voltage Sources and Power Supply
 <p align="center">
 <img src="design/inputs.png"></br>
-  Fig. 5: DC VDD and Pulse Voltage Inputs 
+  Fig. 7: DC VDD and Pulse Voltage Inputs 
 </p>
 
 
 ## Transient Settings
 <p align="center">
 <img src="design/transient.png"></br>
-  Fig. 9: The Transient Analysis inputs Run at 5ns step with stop time 100ns 
+  Fig. 8: The Transient Analysis inputs Run at 5ns step with stop time 100ns 
 </p>
 
 ## Netlist
@@ -184,7 +186,7 @@ xi9 gnd! vdd a a_ inverter
 
 <p align="center">
 <img src="design/ALUwaveform.png"></br>
-  Fig. 11: ALU Waveform 
+  Fig. 9: ALU Waveform 
 </p>
 
 ## Conclusion
